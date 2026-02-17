@@ -1,0 +1,50 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: hsl(285, 80%, 96%);
+}
+
+.hero-section {
+  min-height: 100vh;
+  background-image: url("/assets/img/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.product-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px black;
+}
+
+.card-img-top {
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+footer {
+  font-size: 0.85rem;
+}
