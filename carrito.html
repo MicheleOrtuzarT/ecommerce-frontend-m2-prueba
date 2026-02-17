@@ -42,13 +42,100 @@
     </nav>
 
   </header>
+  
+  <main class="container mt-5 pt-5">
+      <div class="row mt-4">
+        <div class="col-12">
+          <h2 class="fw-bold mb-4 text-center">Tu Carrito</h2>
+        </div>
 
-    <footer class="bg-white border-top text-center py-4 mt-5">
-      <small class="text-muted">© 2026 SkinCareStore – Proyecto Bootcamp </small>
-    </footer>
+        <div class="col-lg-8">
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="lista-carrito">
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="assets/img/crema-pote-solp.jpg"
+                        alt="Producto"
+                        style="
+                          width: 60px;
+                          height: 60px;
+                          object-fit: cover;
+                          border-radius: 8px;
+                        "
+                      />
+                      <div>
+                        <h6 class="mb-0 fw-bold">Serum Calmante</h6>
+                        <small class="text-muted">$15.990</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1</td>
+                  <td>$15.990</td>
+                  <!--Botón de eliminar-->
+                  <td>
+                    <button
+                      class="btn btn-sm btn-outline-danger border-0"
+                      onclick="eliminarProducto(index)"
+                    >
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a
+            href="index.html"
+            class="btn btn-link text-dark p-0 mt-3 text-decoration-none"
+          >
+            <i class="bi bi-arrow-left"></i> Seguir comprando
+          </a>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="card border-0 bg-light p-4 shadow-sm">
+            <h5 class="fw-bold mb-4">Resumen de orden</h5>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Subtotal</span>
+              <span>$15.990</span>
+            </div>
+            <div class="d-flex justify-content-between mb-4">
+              <span>Envío</span>
+              <span class="text-success">Gratis</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-4">
+              <span class="fw-bold">Total</span>
+              <span class="fw-bold h5" id="total-carrito">$15.990</span>
+            </div>
+            <button
+              class="btn btn-dark w-100 py-2 rounded-pill shadow-sm"
+              onclick="finalizarCompra()"
+            >
+              Ir al Pago
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+  <footer class="bg-white border-top text-center py-4 mt-5">
+    <small class="text-muted">© 2026 SkinCareStore – Proyecto Bootcamp </small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
 !
